@@ -1,0 +1,40 @@
+"""
+This contains various lines that aid in examining a data object, checking datatypes, file sizes, and other tasks. 
+
+We assume:
+import pandas as pd
+
+"""
+
+# view the first few rows of the new dataframe
+df.head()
+
+# give the names of each column in the dataframe
+df.columns
+
+# returning the data type of the object itself
+type(df)
+
+# returning the datatype of the values of each column
+df.dtypes
+
+# returning type of just one column
+df.column1.dtypes
+
+# return 5 number summary plus count and mean of all numeric data columns
+df.describe()
+
+# return 5 number summary plus count and mean of a numeric data column
+df.column.describe()
+
+# returning dimensions of dataframe
+df.shape
+
+# Index, Datatype and Memory information
+df.info()
+
+# View unique values and counts
+s.value_counts(dropna=False)
+
+# Unique values and counts for all columns
+df.apply(pd.Series.value_counts)
