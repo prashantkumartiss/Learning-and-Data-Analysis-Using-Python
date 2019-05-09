@@ -1,0 +1,46 @@
+"""
+This file contains the import statements for several of the most used python libraries for 
+importing data, cleaning, munging and visualizing relationships.
+
+The basic format is given, and these can be copied into testing environments, adjusting for filenames and keyword arguments
+"""
+
+import math
+import scipy.stats as ss
+import numpy as np
+import pandas as pandas
+import matplotlib.pyplot as pyplot
+import seaborn as sns
+
+
+# importing csv into a dataframe
+# if a different delimiter is used, use keyword argument sep="_"
+# for bar | enter sep="|"
+# for 
+df = pd.read_csv("________.csv")
+
+
+# copying in only certain columns by name into the dataframe
+df = pd.read_csv("________.csv", usecols=["column1", "column2","column3", ...])
+
+# copying in only certain columns by name into the dataframe
+df = pd.read_csv("________.csv", usecols=["0, 1, 2, ...])
+
+# excluding certain columns from an import
+df = pd.read_csv("________.csv", usecols= lambda column : column not in ["0, 1, 2, ...])
+
+# tab delimited file
+df = pd.read_table("________")
+
+# Read from a SQL table/database
+df = pd.read_sql(query, connection_object)
+
+# reading from a JSON string
+df = pd.read_json(json_string)
+
+
+
+
+
+
+
